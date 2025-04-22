@@ -67,20 +67,33 @@ DISCLAIMER: However, the requirement of documents for student visas may differ a
 NOTE: It is advised that each international student should get medical insurance.` 
   },
   "costs": {
-    "What is the annual average living cost for an international student in India?": `The average living cost for an international student in India, per month, amounts to approximately $400. This cost excludes the tuition fee. A general breakup of monthly expenses is indicated below:
-
-| Particulars           | Indicative Monthly Expenses |
-|------------------------|-----------------------------|
-| Accommodation          | $150                        |
-| Food & Housekeeping    | $100                        |
-| Mobile Expenses        | $10                         |
-| Personal Expenses      | $50                         |
-| Laundry                | $15                         |
-| Stationary             | $30                         |
-| Transport              | $45                         |
-
-
-** Please note, the costs may vary from city to city.`,
+    "What is the annual average living cost for an international student in India?": (
+      <>
+        <p>
+          The average living cost for an international student in India, per month,
+          amounts to approximately $400. This cost excludes the tuition fee.
+          A general breakup of monthly expenses is indicated below:
+        </p>
+        <table border={1}>
+          <thead>
+            <tr>
+              <th>Particulars</th>
+              <th>Indicative Monthly Expenses</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Accommodation</td><td>$150</td></tr>
+            <tr><td>Food & Housekeeping</td><td>$100</td></tr>
+            <tr><td>Mobile Expenses</td><td>$10</td></tr>
+            <tr><td>Personal Expenses</td><td>$50</td></tr>
+            <tr><td>Laundry</td><td>$15</td></tr>
+            <tr><td>Stationary</td><td>$30</td></tr>
+            <tr><td>Transport</td><td>$45</td></tr>
+          </tbody>
+        </table>
+        <p><strong>Note:</strong> Costs may vary from city to city.</p>
+      </>
+    ),
     "What is the annual tuition fee for my courses in India?": `The tuition fees vary across courses and institutes. You may find the details of the same through the Courses page present on the homepage.`,
     "Can my institute provide me with additional concessions on my total fees?": `The decision to provide additional concessions on your fees depends entirely on the institute. You may confirm the same at the time of admission from the institute itself.`
   },
