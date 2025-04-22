@@ -1,6 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { Send, GraduationCap, Clock, MessageSquare, Search, Phone, HelpCircle, X } from 'lucide-react';
 import { faqData } from './data/faqData';
+import Draggable from 'react-draggable';
 
 interface Message {
   text: string;
@@ -161,14 +162,20 @@ What would you like to know?`,
   };
 
   return (
+  //   <Draggable>
+  // <div
+  //   className="fixed bottom-4 right-4 z-50 w-[400px] max-h-[90vh] overflow-hidden rounded-2xl shadow-xl"
+  //   style={{ resize: 'both' }}
+  // >
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-50 p-4 sm:p-6 md:p-8">
       <div className="max-w-4xl mx-auto bg-white rounded-2xl shadow-xl overflow-hidden">
         {/* Header */}
-        <div className="bg-indigo-600 p-6">
-          <div className="flex items-center space-x-4">
+        <div style={{backgroundColor: '#073a7d'}} className="p-6">
+        <div className="flex items-center space-x-4">
             <GraduationCap className="text-white w-8 h-8" />
             <div>
-              <h1 className="text-2xl font-bold text-white">Study in India Assistant</h1>
+              <h1 style={{ fontFamily: "'Play', sans-serif" }} className="text-2xl font-bold text-white">Study in India Assistant</h1>
+              
               <p className="text-indigo-200">Your guide to studying in India</p>
             </div>
           </div>
@@ -194,7 +201,7 @@ What would you like to know?`,
                     {message.timestamp.toLocaleTimeString()}
                   </span>
                 </div>
-                <p className="whitespace-pre-wrap">{message.text}</p>
+                <p style={{ fontFamily: "'Play', sans-serif" }}className="whitespace-pre-wrap">{message.text}</p>
                 {!message.isUser && message.similarQuestions && message.similarQuestions.length > 0 && (
                   <div className="mt-3 space-y-2">
                     <p className="text-sm font-medium">Similar questions you might be interested in:</p>
@@ -227,7 +234,7 @@ What would you like to know?`,
         {/* Input Form */}
         <form onSubmit={handleSubmit} className="p-4 border-t border-gray-200">
           <div className="flex space-x-4">
-            <input
+            <input style={{ fontFamily: "'Play', sans-serif" }}
               type="text"
               value={inputValue}
               onChange={(e) => setInputValue(e.target.value)}
@@ -236,9 +243,13 @@ What would you like to know?`,
             />
             <button
               type="submit"
-              className="bg-indigo-600 text-white rounded-lg px-6 py-2 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 transition-colors duration-200 flex items-center space-x-2"
-            >
-              <span>Send</span>
+              className="text-white rounded-lg px-6 py-2 focus:outline-none focus:ring-2 focus:ring-[#f57f18] focus:ring-offset-2 transition-colors duration-200 flex items-center space-x-2"
+              style={{ backgroundColor: '#f57f18' }}
+              onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = '#c95f00')}
+              onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = '#f57f18')}
+                          >
+              <span style={{ fontFamily: "'Play', sans-serif" }}>Send</span>
+
               <Send className="w-4 h-4" />
             </button>
           </div>
@@ -341,6 +352,8 @@ What would you like to know?`,
         </div>
       )}
     </div>
+    // </div>
+    // </Draggable>
   );
 }
 
