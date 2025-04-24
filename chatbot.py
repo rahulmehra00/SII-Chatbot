@@ -89,7 +89,7 @@ class StudyIndiaChatbot:
                     best_match = (question, answer)
 
         if best_score == 0:
-            return ("", "I apologize, but I couldn't find a specific answer to your question. "
+            return ("", "I apologize, but I couldn't find a specific answer to your question."
                    "Please try rephrasing your question or ask about admissions, visa, or costs.")
 
         return best_match
