@@ -3,70 +3,70 @@ import re
 from typing import Dict, List, Tuple
 
 # FAQ Database
-FAQ_DATA = {
-    "admissions": {
-        "How can I apply to study in India?": """
-To apply for studies in India:
-1. Visit the Study in India portal (www.studyinindia.gov.in)
-2. Register and create your profile
-3. Choose your preferred institutions and courses
-4. Submit required documents
-5. Wait for institution response
-        """,
-        "What documents do I need for admission?": """
-Required documents typically include:
-- Valid passport
-- Academic transcripts
-- English proficiency test scores
-- Statement of purpose
-- Letters of recommendation
-- Passport size photographs
-        """,
-        "What are the eligibility criteria?": """
-General eligibility criteria include:
-- Completed higher secondary education (12th grade)
-- Meet minimum academic scores required by the institution
-- English language proficiency
-- Valid passport
-- Meet specific course prerequisites
-        """
-    },
-    "visa": {
-        "How do I get a student visa for India?": """
-Steps to obtain a student visa:
-1. Receive admission letter from Indian institution
-2. Apply online at e-FRRO portal
-3. Schedule visa appointment at Indian embassy
-4. Submit required documents
-5. Pay visa fees
-6. Attend visa interview if required
-        """,
-        "What is the visa fee?": """
-Visa fees vary by country and duration of stay. 
-Please check the Indian embassy website in your country 
-for current fee structure.
-        """
-    },
-    "costs": {
-        "What are the living costs in India?": """
-Monthly living expenses in India (approximate):
-- Accommodation: $100-300
-- Food: $100-200
-- Transportation: $30-50
-- Utilities: $30-50
-- Miscellaneous: $100
-Total: $360-700 per month
-        """,
-        "Are scholarships available?": """
-Yes, several scholarships are available:
-1. Study in India scholarships
-2. ICCR scholarships
-3. Institution-specific scholarships
-4. Government exchange programs
-Visit www.studyinindia.gov.in for more details
-        """
-    }
-}
+# FAQ_DATA = {
+#     "admissions": {
+#         "How can I apply to study in India?": """
+# To apply for studies in India:
+# 1. Visit the Study in India portal (www.studyinindia.gov.in)
+# 2. Register and create your profile
+# 3. Choose your preferred institutions and courses
+# 4. Submit required documents
+# 5. Wait for institution response
+#         """,
+#         "What documents do I need for admission?": """
+# Required documents typically include:
+# - Valid passport
+# - Academic transcripts
+# - English proficiency test scores
+# - Statement of purpose
+# - Letters of recommendation
+# - Passport size photographs
+#         """,
+#         "What are the eligibility criteria?": """
+# General eligibility criteria include:
+# - Completed higher secondary education (12th grade)
+# - Meet minimum academic scores required by the institution
+# - English language proficiency
+# - Valid passport
+# - Meet specific course prerequisites
+#         """
+#     },
+#     "visa": {
+#         "How do I get a student visa for India?": """
+# Steps to obtain a student visa:
+# 1. Receive admission letter from Indian institution
+# 2. Apply online at e-FRRO portal
+# 3. Schedule visa appointment at Indian embassy
+# 4. Submit required documents
+# 5. Pay visa fees
+# 6. Attend visa interview if required
+#         """,
+#         "What is the visa fee?": """
+# Visa fees vary by country and duration of stay. 
+# Please check the Indian embassy website in your country 
+# for current fee structure.
+#         """
+#     },
+#     "costs": {
+#         "What are the living costs in India?": """
+# Monthly living expenses in India (approximate):
+# - Accommodation: $100-300
+# - Food: $100-200
+# - Transportation: $30-50
+# - Utilities: $30-50
+# - Miscellaneous: $100
+# Total: $360-700 per month
+#         """,
+#         "Are scholarships available?": """
+# Yes, several scholarships are available:
+# 1. Study in India scholarships
+# 2. ICCR scholarships
+# 3. Institution-specific scholarships
+# 4. Government exchange programs
+# Visit www.studyinindia.gov.in for more details
+#         """
+#     }
+# }
 
 class StudyIndiaChatbot:
     def __init__(self):

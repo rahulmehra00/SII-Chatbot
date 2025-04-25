@@ -2,6 +2,8 @@ import React, { useState, useRef, useEffect } from 'react';
 import { Send, GraduationCap, MessageSquare, X } from 'lucide-react';
 import { faqData } from './data/faqData';
 import Draggable from 'react-draggable';
+import { Copy } from 'lucide-react';
+
 
 interface Message {
   text: string;
@@ -114,6 +116,10 @@ What would you like to know?`,
     return { text: bestMatch.text, similarQuestions };
   };
 
+  const copyToClipboard = (text: string): void => {
+    navigator.clipboard.writeText(text).then(() => {
+    });
+  };
   
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -171,36 +177,6 @@ What would you like to know?`,
     }
   };
   
-
-  // const handleSubmit = async (e: React.FormEvent) => {
-  //   e.preventDefault();
-  //   if (!inputValue.trim()) return;
-
-  //   const userMessage: Message = {
-  //     text: inputValue,
-  //     isUser: true,
-  //     timestamp: new Date()
-  //   };
-
-  //   setMessages(prev => [...prev, userMessage]);
-  //   setInputValue('');
-  //   setIsTyping(true);
-
-  //   setTimeout(() => {
-  //     const { text, similarQuestions } = findBestMatch(inputValue);
-      
-  //     const botMessage: Message = {
-  //       text,
-  //       isUser: false,
-  //       timestamp: new Date(),
-  //       similarQuestions: similarQuestions.length > 0 ? similarQuestions : undefined
-  //     };
-
-  //     setMessages(prev => [...prev, botMessage]);
-  //     setIsTyping(false);
-  //   }, 1000);
-  // };
-
   const handleContactSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     const message = `Thank you for reaching out to us! Our helpdesk team will contact you soon at ${contactForm.phone} or ${contactForm.email}.`;
@@ -248,33 +224,38 @@ What would you like to know?`,
           key={index}
           className={`flex ${message.isUser ? 'justify-end' : 'justify-start'}`}
         >
-          <div
-            className={`max-w-[80%] rounded-2xl p-4 ${
-              message.isUser
-                ? 'bg-indigo-600 text-white'
-                : 'bg-gray-100 text-gray-800'
-            }`}
-          >
-            <div className="flex items-center space-x-2 mb-1">
-              {!message.isUser && <MessageSquare className="w-4 h-4" />}
-              <span className="text-xs opacity-75">
-                {message.timestamp.toLocaleTimeString()}
-              </span>
-            </div>
-            <p style={{ fontFamily: "'Play', sans-serif" }}className="whitespace-pre-wrap">{message.text}</p>
-            {!message.isUser && message.similarQuestions && message.similarQuestions.length > 0 && (
-              <div className="mt-3 space-y-2">
-                <p className="text-sm font-medium">Similar questions you might be interested in:</p>
-                <ul className="space-y-1">
-                  {message.similarQuestions.map((question, idx) => (
-                    <li key={idx} className="text-sm">
-                      • {question}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            )}
-          </div>
+          <div className={`max-w-[80%] rounded-2xl p-4 relative ${message.isUser ? 'bg-indigo-600 text-white' : 'bg-gray-100 text-gray-800'}`}>
+  <div className="flex items-center space-x-2 mb-1">
+    {!message.isUser && <MessageSquare className="w-4 h-4" />}
+    <span className="text-xs opacity-75">{message.timestamp.toLocaleTimeString()}</span>
+  </div>
+
+  <p style={{ fontFamily: "'Play', sans-serif" }} className="whitespace-pre-wrap">{message.text}</p>
+
+  {/* Copy Icon */}
+  {!message.isUser && (
+    <button
+      onClick={() => copyToClipboard(message.text)}
+      className="absolute top-2 right-2 p-1 text-gray-500 hover:text-gray-800"
+      title="Copy message"
+    >
+      <Copy className="w-4 h-4" />
+    </button>
+  )}
+
+  {/* Similar Questions */}
+  {!message.isUser && message.similarQuestions && message.similarQuestions.length > 0 && (
+    <div className="mt-3 space-y-2">
+      <p className="text-sm font-medium">Similar questions you might be interested in:</p>
+      <ul className="space-y-1">
+        {message.similarQuestions.map((question, idx) => (
+          <li key={idx} className="text-sm">• {question}</li>
+        ))}
+      </ul>
+    </div>
+  )}
+</div>
+
         </div>
       ))}
       {isTyping && (
