@@ -314,3 +314,8 @@ Need help with:
 2025-04-30 20:42:29,User,Thisisalongstringoftextwithnospaceswhichcanbehardtoreadandprocessespeciallywhenitisusedinscenarioswheretextparsingisrequiredfornaturalanguageprocessingoruserinterfacevalidationpurposes.,"I’m sorry, I didn’t understand that 😓. Could you please rephrase your question?"
 2025-04-30 20:45:34,User,Thisisalongstringoftextwithnospaceswhichcanbehardtoreadandprocessespeciallywhenitisusedinscenarioswheretextparsingisrequiredfornaturalanguageprocessingoruserinterfacevalidationpurposes.,"I’m sorry, I didn’t understand that 😓. Could you please rephrase your question?"
 2025-04-30 20:47:53,User,kh,"I’m sorry, I didn’t understand that 😓. Could you please rephrase your question?"
+2025-05-01 12:00:04,User,aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa,"I’m sorry, I didn’t understand that 😓. Could you please rephrase your question?"
+2025-05-01 12:04:18,User,JAWAHARLAL NEHRU TECHNOLOGICAL UNIVERSITY,"['dfaam@jntua.ac.in', 'prof.balaji.ece@gmail.com']"
+2025-05-01 12:05:07,User,JAWAHARLAL NEHRU TECHNOLOGICAL UNIVERSITY,"['dfaam@jntua.ac.in', 'prof.balaji.ece@gmail.com']"
+2025-05-02 09:52:11,User,hi,Hello!😊 How can I assist you today?
+2025-05-02 09:52:22,User,abcd,"Error generating response: Error code: 401 - {'error': {'message': 'Incorrect API key provided: sk-12345*******************************5678. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_api_key'}}"

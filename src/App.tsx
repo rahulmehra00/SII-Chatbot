@@ -24,7 +24,7 @@ function App() {
   const [userName, setUserName] = useState("");
   const [messages, setMessages] = useState<Message[]>([
     {
-      text: `Hi! 😊 I'm the Study in India NaMo. 🎓
+      text: `Hi! 😊 I'm the Study in India Assistant. 🎓
 I'm here to help you with queries about the SII program, Courses, Visa Regulations, and more. How can I assist you today?
 
 💡 Common Queries:
@@ -281,7 +281,7 @@ Feel free to ask anything! 😊`,
   };
 
   return (
-    <Draggable>
+    <Draggable cancel=".no-drag">
       <div
         className="fixed bottom-4 right-4 z-50 w-[50vh] max-h-[100vh]  rounded-2xl shadow-xl"
         style={{ resize: "both" }}
@@ -331,7 +331,9 @@ Feel free to ask anything! 😊`,
 
                   <p
                     style={{ fontFamily: "'Play', sans-serif" }}
-                    className="whitespace-pre-wrap break-words overflow-hidden"
+                    className="whitespace-pre-wrap break-words overflow-hidden select-text cursor-text no-drag"
+                    onMouseDown={(e) => e.stopPropagation()}
+                    onMouseUp={(e) => e.stopPropagation()}
                   >
                     
                     {message.text}
