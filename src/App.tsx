@@ -25,21 +25,13 @@ function App() {
   const [messages, setMessages] = useState<Message[]>([
     {
       text: `Hi! 😊 I'm the Study in India Assistant. 🎓
-I'm here to help you with queries about the SII program, Courses, Visa Regulations, and more. How can I assist you today?
-
-💡 Common Queries:
-➡️ What is the Study in India (SII) program?
-➡️ How do I apply for the SII program?
-➡️ Popular courses among international students
-➡️ What documents do I need?
-➡️ How do I apply for a student visa to India?
-
-Feel free to ask anything! 😊`,
+I'm here to help you with queries about the SII program, Courses, Visa Regulations, and more. How can I assist you today?`,
       isUser: false,
       timestamp: new Date(),
     },
   ]);
   const [inputValue, setInputValue] = useState("");
+  const [suggestionValue, setSuggestionValue] = useState("");
   const [isTyping, setIsTyping] = useState(false);
   const [showContactForm, setShowContactForm] = useState(false);
   const [contactForm, setContactForm] = useState<ContactForm>({
@@ -197,45 +189,40 @@ Feel free to ask anything! 😊`,
     ]);
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (
+    
+    e: React.FormEvent,
+    customInput?: string
+  ) => {
     e.preventDefault();
-
-    // If there's no input value, prevent submitting
-    if (!inputValue.trim()) return;
-
-    // Create user message object
+    const messageText = customInput ?? inputValue;
+  
+    if (!messageText.trim()) return;
+  
     const userMessage = {
-      text: inputValue,
+      text: messageText,
       isUser: true,
       timestamp: new Date(),
     };
-
-    // Update state with user message
+  
     setMessages((prev) => [...prev, userMessage]);
-
-    // Clear input field
-    setInputValue("");
-
-    // Indicate that the bot is typing
+    setInputValue(""); // clear only the input box
     setIsTyping(true);
-
+  
     try {
-      // Get the username (You can either store it as a variable or get it from user input)
-      const username = "User"; // Replace this with actual username if it's dynamic
-
-      // Send POST request to Flask server
+      const username = "Student";
+  
       const response = await fetch("http://127.0.0.1:5000/api/chat", {
-        method: "POST", // Ensure POST is used
+        method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-
         body: JSON.stringify({
-          message: inputValue, // Message from the user
-          username: username, // Include the username here
+          message: messageText,
+          username: username,
         }),
       });
-
+  
       if (response.ok) {
         const data = await response.json();
         const botMessage = {
@@ -243,8 +230,6 @@ Feel free to ask anything! 😊`,
           isUser: false,
           timestamp: new Date(),
         };
-
-        // Update messages with bot response
         setMessages((prev) => [...prev, botMessage]);
       } else {
         console.error("Failed to fetch response");
@@ -252,10 +237,10 @@ Feel free to ask anything! 😊`,
     } catch (error) {
       console.error("Error:", error);
     } finally {
-      // Stop the typing indication
       setIsTyping(false);
     }
   };
+  
 
   const handleContactSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -335,7 +320,6 @@ Feel free to ask anything! 😊`,
                     onMouseDown={(e) => e.stopPropagation()}
                     onMouseUp={(e) => e.stopPropagation()}
                   >
-                    
                     {message.text}
                   </p>
 
@@ -399,6 +383,51 @@ Feel free to ask anything! 😊`,
               </div>
             )}
             <button
+              type="button"
+              onClick={(e) => handleSubmit(e as any, "About SII Programme")}
+              className="border-2 mr-2 border-sky-600 text-sky-600 p-1 rounded-lg"
+            >
+              About SII Programme
+            </button>
+            <button
+              type="button"
+              onClick={(e) => handleSubmit(e as any, "How to Apply")}
+              className="border-2 border-sky-600 text-sky-600 p-1 rounded-lg"
+            >
+              How to Apply
+            </button>
+
+            <button
+              type="button"
+              onClick={(e) => handleSubmit(e as any, "Documents Required")}
+              className="border-2 mr-2 border-sky-600 text-sky-600 p-1 rounded-lg"
+            >
+              Documents Required
+            </button>
+            
+            <button
+              type="button"
+              onClick={(e) => handleSubmit(e as any, "Visa")}
+              className="border-2 border-sky-600 text-sky-600 p-1 rounded-lg"
+            >
+              Visa
+            </button>
+            <button
+              type="button"
+              onClick={(e) => handleSubmit(e as any, "Popular Courses")}
+              className="border-2 mr-2 border-sky-600 text-sky-600 p-1 rounded-lg"
+            >
+              Popular Courses
+            </button>
+            <button
+              type="button"
+              onClick={(e) => handleSubmit(e as any, "Scholarship")}
+              className="border-2 border-sky-600 text-sky-600 p-1 rounded-lg"
+            >
+              Scholarship
+            </button>
+
+            {/* <button
               onClick={handleHelpfulBtn}
               className="helpful-btn mr-4 border-2 border-orange-500 text-orange-500 p-1 rounded-lg"
             >
@@ -411,7 +440,7 @@ Feel free to ask anything! 😊`,
             >
               Not Helpful
               <i className="bi bi-hand-thumbs-down"></i>
-            </button>
+            </button> */}
 
             {<div ref={messagesEndRef} />}
           </div>

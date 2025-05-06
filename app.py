@@ -55,6 +55,9 @@ CORS(app)
 # Load data
 with open('src/data/data.json', 'r', encoding='utf-8') as file:
     qa_data = json.load(file)
+    
+# Create a lowercase-key version of the QA data
+qa_data_lower = {q.lower(): a for q, a in qa_data.items()}
 
 # Prepare documents
 documents = [{"question": q, "answer": a, "content": f"{q}\n{a}"} for q, a in qa_data.items()]
@@ -124,8 +127,9 @@ def chat():
         return jsonify({'error': 'No message provided'}), 400
 
     # 🔁 First check for exact match in data.json
-    if user_message in qa_data:
-        response = qa_data[user_message]
+    key_lower = user_message.lower()
+    if key_lower in qa_data_lower:
+        response = qa_data_lower[key_lower]
     else:
         # 🔍 Otherwise generate with RAG
         response = generate_answer_rag(user_message)

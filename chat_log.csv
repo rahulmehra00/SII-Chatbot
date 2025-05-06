@@ -319,3 +319,648 @@ Need help with:
 2025-05-01 12:05:07,User,JAWAHARLAL NEHRU TECHNOLOGICAL UNIVERSITY,"['dfaam@jntua.ac.in', 'prof.balaji.ece@gmail.com']"
 2025-05-02 09:52:11,User,hi,Hello!😊 How can I assist you today?
 2025-05-02 09:52:22,User,abcd,"Error generating response: Error code: 401 - {'error': {'message': 'Incorrect API key provided: sk-12345*******************************5678. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_api_key'}}"
+2025-05-03 12:16:15,User,what documents do i need?,"You'll need to upload these documents while applying:
+
+📄 **Core Documents:**
+- 📕 Passport (or ID proof if passport is under process)
+- 📘 Marksheets (10th & 12th or equivalent)
+- 📑 Degree certificates (if applicable)
+- 🖼️ Passport-size photograph
+
+📌 **Possible Extras:**
+- 🌍 English proficiency test scores
+- 📝 Additional exam scorecards (if any)
+
+✅ **Requirements:**
+- 📂 PDF/JPG/PNG formats
+- ⚖️ Under 2MB per file
+
+💡 Tip: Check each institute's specific requirements on the SII Portal
+
+Would you like to know:
+ 👉 Can I upload my documents in my native language?
+ 👉 Can I apply without a passport?
+ 👉 Can I upload documents later?
+ 👉 Accepted file types and size?
+ 👉 Do I need a passport for registration?"
+2025-05-03 12:16:31,User,what documents do i need,"Error generating response: Error code: 401 - {'error': {'message': 'Incorrect API key provided: sk-12345*******************************5678. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_api_key'}}"
+2025-05-03 12:21:31,User,hi,Hello!😊 How can I assist you today?
+2025-05-03 12:21:45,User,hello,Hi there!😊 How can I help?
+2025-05-03 12:34:07,User,"Yes, show me how to apply","Error generating response: Error code: 401 - {'error': {'message': 'Incorrect API key provided: sk-12345*******************************5678. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_api_key'}}"
+2025-05-03 12:34:41,User,I want to browse courses,"Error generating response: Error code: 401 - {'error': {'message': 'Incorrect API key provided: sk-12345*******************************5678. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_api_key'}}"
+2025-05-03 12:47:25,User,hi,Hello!😊 How can I assist you today?
+2025-05-03 12:47:30,User,hi,Hello!😊 How can I assist you today?
+2025-05-03 12:47:39,User,hi,Hello!😊 How can I assist you today?
+2025-05-03 12:54:31,User,hi,Hello!😊 How can I assist you today?
+2025-05-03 12:57:52,User,About SII Programme,"Hello! 😊 The Study in India (SII) program is a flagship initiative by the Ministry of Education, Government of India. It was launched in 2018 to invite international students to pursue higher education in India's top institutions. 🌏📚
+
+The program connects students with over 100+ top-ranked institutes and offers 2600+ courses across disciplines — from engineering and law to yoga and Ayurveda!
+
+Would you like to know how to apply or explore courses available under SII?
+ 👉 Yes, show me how to apply
+ 👉 I want to browse courses
+ 👉 No, continue"
+2025-05-03 13:05:47,User,hi,Hello!😊 How can I assist you today?
+2025-05-03 13:05:55,User,hi,Hello!😊 How can I assist you today?
+2025-05-03 13:55:32,User,About SII Programme,"Hello! 😊 The Study in India (SII) program is a flagship initiative by the Ministry of Education, Government of India. It was launched in 2018 to invite international students to pursue higher education in India's top institutions. 🌏📚
+
+The program connects students with over 100+ top-ranked institutes and offers 2600+ courses across disciplines — from engineering and law to yoga and Ayurveda!
+
+Would you like to know how to apply or explore courses available under SII?
+ 👉 Yes, show me how to apply
+ 👉 I want to browse courses
+ 👉 No, continue"
+2025-05-03 13:55:50,User,Send,"Error generating response: Error code: 401 - {'error': {'message': 'Incorrect API key provided: sk-12345*******************************5678. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_api_key'}}"
+2025-05-03 13:55:53,User,Send,"Error generating response: Error code: 401 - {'error': {'message': 'Incorrect API key provided: sk-12345*******************************5678. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_api_key'}}"
+2025-05-03 13:56:12,User,hi,Hello!😊 How can I assist you today?
+2025-05-03 13:56:26,User,hello,Hi there!😊 How can I help?
+2025-05-03 13:56:39,User,About SII Programme,"Hello! 😊 The Study in India (SII) program is a flagship initiative by the Ministry of Education, Government of India. It was launched in 2018 to invite international students to pursue higher education in India's top institutions. 🌏📚
+
+The program connects students with over 100+ top-ranked institutes and offers 2600+ courses across disciplines — from engineering and law to yoga and Ayurveda!
+
+Would you like to know how to apply or explore courses available under SII?
+ 👉 Yes, show me how to apply
+ 👉 I want to browse courses
+ 👉 No, continue"
+2025-05-03 13:59:31,User,hi,Hello!😊 How can I assist you today?
+2025-05-03 14:00:21,User,About SII Programme,"Hello! 😊 The Study in India (SII) program is a flagship initiative by the Ministry of Education, Government of India. It was launched in 2018 to invite international students to pursue higher education in India's top institutions. 🌏📚
+
+The program connects students with over 100+ top-ranked institutes and offers 2600+ courses across disciplines — from engineering and law to yoga and Ayurveda!
+
+Would you like to know how to apply or explore courses available under SII?
+ 👉 Yes, show me how to apply
+ 👉 I want to browse courses
+ 👉 No, continue"
+2025-05-03 14:00:23,User,About SII Programme,"Hello! 😊 The Study in India (SII) program is a flagship initiative by the Ministry of Education, Government of India. It was launched in 2018 to invite international students to pursue higher education in India's top institutions. 🌏📚
+
+The program connects students with over 100+ top-ranked institutes and offers 2600+ courses across disciplines — from engineering and law to yoga and Ayurveda!
+
+Would you like to know how to apply or explore courses available under SII?
+ 👉 Yes, show me how to apply
+ 👉 I want to browse courses
+ 👉 No, continue"
+2025-05-03 14:00:26,User,hello,Hi there!😊 How can I help?
+2025-05-03 14:00:42,User,Can I apply without a passport?,"Yes, you can register and even complete most of your application without a passport.
+
+📌 However, you’ll need a valid passport to:
+- Upload final documents
+- Receive an offer letter
+- Apply for a visa
+
+⏳ Make sure your passport is ready before the admission cycle ends.
+
+👉 Can I update my passport later in the dashboard?
+👉 Will not having a passport delay my scholarship eligibility?"
+2025-05-03 14:03:18,User,About SII Programme,"Hello! 😊 The Study in India (SII) program is a flagship initiative by the Ministry of Education, Government of India. It was launched in 2018 to invite international students to pursue higher education in India's top institutions. 🌏📚
+
+The program connects students with over 100+ top-ranked institutes and offers 2600+ courses across disciplines — from engineering and law to yoga and Ayurveda!
+
+Would you like to know how to apply or explore courses available under SII?
+ 👉 Yes, show me how to apply
+ 👉 I want to browse courses
+ 👉 No, continue"
+2025-05-03 14:17:44,User,About SII Programme,"Hello! 😊 The Study in India (SII) program is a flagship initiative by the Ministry of Education, Government of India. It was launched in 2018 to invite international students to pursue higher education in India's top institutions. 🌏📚
+
+The program connects students with over 100+ top-ranked institutes and offers 2600+ courses across disciplines — from engineering and law to yoga and Ayurveda!
+
+Would you like to know how to apply or explore courses available under SII?
+ 👉 Yes, show me how to apply
+ 👉 I want to browse courses
+ 👉 No, continue"
+2025-05-03 14:17:49,User,How to Apply,"Error generating response: Error code: 401 - {'error': {'message': 'Incorrect API key provided: sk-12345*******************************5678. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_api_key'}}"
+2025-05-03 14:18:22,User,About SII Programme,"Hello! 😊 The Study in India (SII) program is a flagship initiative by the Ministry of Education, Government of India. It was launched in 2018 to invite international students to pursue higher education in India's top institutions. 🌏📚
+
+The program connects students with over 100+ top-ranked institutes and offers 2600+ courses across disciplines — from engineering and law to yoga and Ayurveda!
+
+Would you like to know how to apply or explore courses available under SII?
+ 👉 Yes, show me how to apply
+ 👉 I want to browse courses
+ 👉 No, continue"
+2025-05-03 14:18:29,User,How to Apply,"Error generating response: Error code: 401 - {'error': {'message': 'Incorrect API key provided: sk-12345*******************************5678. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_api_key'}}"
+2025-05-03 14:18:31,User,Visa,"Error generating response: Error code: 401 - {'error': {'message': 'Incorrect API key provided: sk-12345*******************************5678. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_api_key'}}"
+2025-05-03 14:21:17,User,How to Apply,"Error generating response: Error code: 401 - {'error': {'message': 'Incorrect API key provided: sk-12345*******************************5678. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_api_key'}}"
+2025-05-03 14:21:23,User,About SII Programme,"Hello! 😊 The Study in India (SII) program is a flagship initiative by the Ministry of Education, Government of India. It was launched in 2018 to invite international students to pursue higher education in India's top institutions. 🌏📚
+
+The program connects students with over 100+ top-ranked institutes and offers 2600+ courses across disciplines — from engineering and law to yoga and Ayurveda!
+
+Would you like to know how to apply or explore courses available under SII?
+ 👉 Yes, show me how to apply
+ 👉 I want to browse courses
+ 👉 No, continue"
+2025-05-03 14:23:34,User,How to Apply,"Error generating response: Error code: 401 - {'error': {'message': 'Incorrect API key provided: sk-12345*******************************5678. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_api_key'}}"
+2025-05-03 14:23:34,User,How to Apply,"Error generating response: Error code: 401 - {'error': {'message': 'Incorrect API key provided: sk-12345*******************************5678. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_api_key'}}"
+2025-05-03 14:23:38,User,About SII Programme,"Hello! 😊 The Study in India (SII) program is a flagship initiative by the Ministry of Education, Government of India. It was launched in 2018 to invite international students to pursue higher education in India's top institutions. 🌏📚
+
+The program connects students with over 100+ top-ranked institutes and offers 2600+ courses across disciplines — from engineering and law to yoga and Ayurveda!
+
+Would you like to know how to apply or explore courses available under SII?
+ 👉 Yes, show me how to apply
+ 👉 I want to browse courses
+ 👉 No, continue"
+2025-05-03 14:23:40,User,How to Apply,"Error generating response: Error code: 401 - {'error': {'message': 'Incorrect API key provided: sk-12345*******************************5678. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_api_key'}}"
+2025-05-03 14:23:43,User,About SII Programme,"Hello! 😊 The Study in India (SII) program is a flagship initiative by the Ministry of Education, Government of India. It was launched in 2018 to invite international students to pursue higher education in India's top institutions. 🌏📚
+
+The program connects students with over 100+ top-ranked institutes and offers 2600+ courses across disciplines — from engineering and law to yoga and Ayurveda!
+
+Would you like to know how to apply or explore courses available under SII?
+ 👉 Yes, show me how to apply
+ 👉 I want to browse courses
+ 👉 No, continue"
+2025-05-03 14:25:00,User,About SII Programme,"Hello! 😊 The Study in India (SII) program is a flagship initiative by the Ministry of Education, Government of India. It was launched in 2018 to invite international students to pursue higher education in India's top institutions. 🌏📚
+
+The program connects students with over 100+ top-ranked institutes and offers 2600+ courses across disciplines — from engineering and law to yoga and Ayurveda!
+
+Would you like to know how to apply or explore courses available under SII?
+ 👉 Yes, show me how to apply
+ 👉 I want to browse courses
+ 👉 No, continue"
+2025-05-03 14:25:03,User,How to Apply,"Error generating response: Error code: 401 - {'error': {'message': 'Incorrect API key provided: sk-12345*******************************5678. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_api_key'}}"
+2025-05-03 14:25:05,User,Visa,"Error generating response: Error code: 401 - {'error': {'message': 'Incorrect API key provided: sk-12345*******************************5678. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_api_key'}}"
+2025-05-03 14:25:07,User,Documents Required,"Error generating response: Error code: 401 - {'error': {'message': 'Incorrect API key provided: sk-12345*******************************5678. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_api_key'}}"
+2025-05-03 14:25:10,User,Popular Courses,"Error generating response: Error code: 401 - {'error': {'message': 'Incorrect API key provided: sk-12345*******************************5678. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_api_key'}}"
+2025-05-03 14:25:28,User,About SII Programme,"Hello! 😊 The Study in India (SII) program is a flagship initiative by the Ministry of Education, Government of India. It was launched in 2018 to invite international students to pursue higher education in India's top institutions. 🌏📚
+
+The program connects students with over 100+ top-ranked institutes and offers 2600+ courses across disciplines — from engineering and law to yoga and Ayurveda!
+
+Would you like to know how to apply or explore courses available under SII?
+ 👉 Yes, show me how to apply
+ 👉 I want to browse courses
+ 👉 No, continue"
+2025-05-03 14:25:33,User,How to Apply,"Error generating response: Error code: 401 - {'error': {'message': 'Incorrect API key provided: sk-12345*******************************5678. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_api_key'}}"
+2025-05-03 14:26:56,User,Documents Required,"Error generating response: Error code: 401 - {'error': {'message': 'Incorrect API key provided: sk-12345*******************************5678. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_api_key'}}"
+2025-05-03 14:27:01,User,Visa,"Error generating response: Error code: 401 - {'error': {'message': 'Incorrect API key provided: sk-12345*******************************5678. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_api_key'}}"
+2025-05-03 14:28:09,User,How to Apply,"To apply to Study in India, follow these steps:
+
+1️⃣ Visit [www.studyinindia.gov.in](https://www.studyinindia.gov.in)
+2️⃣ Register as a new user using your email ID
+3️⃣ Fill out your profile with academic and personal info
+4️⃣ Upload necessary documents (marksheets, passport, etc.)
+5️⃣ Choose and rank your course preferences
+6️⃣ Submit your application — that’s it! ✅
+
+You can track updates and offers through your dashboard after submission.
+
+Need help with:
+ 👉 What documents do I need?
+ 👉 What happens after applying?
+ 👉 I made a mistake. Can I fix it?
+ 👉 Checklist before submitting?"
+2025-05-03 14:28:12,User,Visa,"🛂 Here’s how to apply for a student visa:
+
+1️⃣ Get an admission or offer letter from a Study in India partner institute
+2️⃣ Visit the visa portal: indianvisaonline.gov.in
+3️⃣ Fill out the visa application form and upload the required documents
+4️⃣ Submit your application at the nearest Indian embassy or consulate in your country
+5️⃣ Apply specifically for an S Visa (Student Visa)
+
+📌 Your visa is issued only after your admission is confirmed.
+
+Would you like help with:
+👉 What documents are required?
+👉 Where to find my nearest embassy?
+👉 What is the visa fee?"
+2025-05-03 14:28:14,User,Documents Required,"You'll need to upload these documents while applying:
+
+📄 **Core Documents:**
+- 📕 Passport (or ID proof if passport is under process)
+- 📘 Marksheets (10th & 12th or equivalent)
+- 📑 Degree certificates (if applicable)
+- 🖼️ Passport-size photograph
+
+📌 **Possible Extras:**
+- 🌍 English proficiency test scores
+- 📝 Additional exam scorecards (if any)
+
+✅ **Requirements:**
+- 📂 PDF/JPG/PNG formats
+- ⚖️ Under 2MB per file
+
+💡 Tip: Check each institute's specific requirements on the SII Portal
+
+Would you like to know:
+ 👉 Can I upload my documents in my native language?
+ 👉 Can I apply without a passport?
+ 👉 Can I upload documents later?
+ 👉 Accepted file types and size?
+ 👉 Do I need a passport for registration?"
+2025-05-03 14:28:18,User,Scholarship,"Study in India offers several types of financial support:
+
+🎓 Tuition fee waivers: 100%, 50%, or 25%
+💰 Based on academic merit, scholarship exam scores, and country-specific quotas
+
+Some institutes may also offer:
+✅ Accommodation support
+✅ Food and boarding discounts
+
+Would you like to check:
+ 👉 Am I eligible for a scholarship?
+ 👉 How to apply for a scholarship?
+ 👉 What costs are not covered?"
+2025-05-03 14:28:20,User,Popular Courses,"Error generating response: Error code: 401 - {'error': {'message': 'Incorrect API key provided: sk-12345*******************************5678. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_api_key'}}"
+2025-05-03 14:28:22,User,Popular Courses,"Error generating response: Error code: 401 - {'error': {'message': 'Incorrect API key provided: sk-12345*******************************5678. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_api_key'}}"
+2025-05-03 14:28:24,User,How to Apply,"To apply to Study in India, follow these steps:
+
+1️⃣ Visit [www.studyinindia.gov.in](https://www.studyinindia.gov.in)
+2️⃣ Register as a new user using your email ID
+3️⃣ Fill out your profile with academic and personal info
+4️⃣ Upload necessary documents (marksheets, passport, etc.)
+5️⃣ Choose and rank your course preferences
+6️⃣ Submit your application — that’s it! ✅
+
+You can track updates and offers through your dashboard after submission.
+
+Need help with:
+ 👉 What documents do I need?
+ 👉 What happens after applying?
+ 👉 I made a mistake. Can I fix it?
+ 👉 Checklist before submitting?"
+2025-05-03 14:28:26,User,Scholarship,"Study in India offers several types of financial support:
+
+🎓 Tuition fee waivers: 100%, 50%, or 25%
+💰 Based on academic merit, scholarship exam scores, and country-specific quotas
+
+Some institutes may also offer:
+✅ Accommodation support
+✅ Food and boarding discounts
+
+Would you like to check:
+ 👉 Am I eligible for a scholarship?
+ 👉 How to apply for a scholarship?
+ 👉 What costs are not covered?"
+2025-05-03 14:28:28,User,Documents Required,"You'll need to upload these documents while applying:
+
+📄 **Core Documents:**
+- 📕 Passport (or ID proof if passport is under process)
+- 📘 Marksheets (10th & 12th or equivalent)
+- 📑 Degree certificates (if applicable)
+- 🖼️ Passport-size photograph
+
+📌 **Possible Extras:**
+- 🌍 English proficiency test scores
+- 📝 Additional exam scorecards (if any)
+
+✅ **Requirements:**
+- 📂 PDF/JPG/PNG formats
+- ⚖️ Under 2MB per file
+
+💡 Tip: Check each institute's specific requirements on the SII Portal
+
+Would you like to know:
+ 👉 Can I upload my documents in my native language?
+ 👉 Can I apply without a passport?
+ 👉 Can I upload documents later?
+ 👉 Accepted file types and size?
+ 👉 Do I need a passport for registration?"
+2025-05-03 14:29:46,User,Popular Courses,"Error generating response: Error code: 401 - {'error': {'message': 'Incorrect API key provided: sk-12345*******************************5678. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_api_key'}}"
+2025-05-03 14:29:53,User,Popular Courses,"Error generating response: Error code: 401 - {'error': {'message': 'Incorrect API key provided: sk-12345*******************************5678. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_api_key'}}"
+2025-05-03 14:30:36,User,Popular Courses,"Some of the most popular fields are:
+
+⚙️ Engineering & IT
+📈 Business & Management
+⚖️ Law
+🧘 Yoga & Ayurveda
+🧪 Health & Allied Sciences
+
+These courses are available across multiple institutes and cities.
+
+👉 Can I apply to more than one course?
+👉 Are these courses harder to get into due to demand?"
+2025-05-03 14:31:53,User,Popular Courses,"Some of the most popular fields are:
+
+⚙️ Engineering & IT
+📈 Business & Management
+⚖️ Law
+🧘 Yoga & Ayurveda
+🧪 Health & Allied Sciences
+
+These courses are available across multiple institutes and cities.
+
+👉 Can I apply to more than one course?
+👉 Are these courses harder to get into due to demand?"
+2025-05-03 14:33:06,User,Popular Courses,"Some of the most popular fields are:
+
+⚙️ Engineering & IT
+📈 Business & Management
+⚖️ Law
+🧘 Yoga & Ayurveda
+🧪 Health & Allied Sciences
+
+These courses are available across multiple institutes and cities.
+
+👉 Can I apply to more than one course?
+👉 Are these courses harder to get into due to demand?"
+2025-05-03 14:37:17,Student,Popular Courses,"Some of the most popular fields are:
+
+⚙️ Engineering & IT
+📈 Business & Management
+⚖️ Law
+🧘 Yoga & Ayurveda
+🧪 Health & Allied Sciences
+
+These courses are available across multiple institutes and cities.
+
+👉 Can I apply to more than one course?
+👉 Are these courses harder to get into due to demand?"
+2025-05-03 14:58:33,Student,Documents Required,"You'll need to upload these documents while applying:
+
+📄 **Core Documents:**
+- 📕 Passport (or ID proof if passport is under process)
+- 📘 Marksheets (10th & 12th or equivalent)
+- 📑 Degree certificates (if applicable)
+- 🖼️ Passport-size photograph
+
+📌 **Possible Extras:**
+- 🌍 English proficiency test scores
+- 📝 Additional exam scorecards (if any)
+
+✅ **Requirements:**
+- 📂 PDF/JPG/PNG formats
+- ⚖️ Under 2MB per file
+
+💡 Tip: Check each institute's specific requirements on the SII Portal
+
+Would you like to know:
+ 👉 Can I upload my documents in my native language?
+ 👉 Can I apply without a passport?
+ 👉 Can I upload documents later?
+ 👉 Accepted file types and size?
+ 👉 Do I need a passport for registration?"
+2025-05-05 09:47:05,Student,About SII Programme,"Hello! 😊 The Study in India (SII) program is a flagship initiative by the Ministry of Education, Government of India. It was launched in 2018 to invite international students to pursue higher education in India's top institutions. 🌏📚
+
+The program connects students with over 100+ top-ranked institutes and offers 2600+ courses across disciplines — from engineering and law to yoga and Ayurveda!
+
+Would you like to know how to apply or explore courses available under SII?
+ 👉 Yes, show me how to apply
+ 👉 I want to browse courses
+ 👉 No, continue"
+2025-05-05 09:47:20,Student,How to Apply,"To apply to Study in India, follow these steps:
+
+1️⃣ Visit [www.studyinindia.gov.in](https://www.studyinindia.gov.in)
+2️⃣ Register as a new user using your email ID
+3️⃣ Fill out your profile with academic and personal info
+4️⃣ Upload necessary documents (marksheets, passport, etc.)
+5️⃣ Choose and rank your course preferences
+6️⃣ Submit your application — that’s it! ✅
+
+You can track updates and offers through your dashboard after submission.
+
+Need help with:
+ 👉 What documents do I need?
+ 👉 What happens after applying?
+ 👉 I made a mistake. Can I fix it?
+ 👉 Checklist before submitting?"
+2025-05-05 09:47:29,Student,what documents do i need?,"You'll need to upload these documents while applying:
+
+📄 **Core Documents:**
+- 📕 Passport (or ID proof if passport is under process)
+- 📘 Marksheets (10th & 12th or equivalent)
+- 📑 Degree certificates (if applicable)
+- 🖼️ Passport-size photograph
+
+📌 **Possible Extras:**
+- 🌍 English proficiency test scores
+- 📝 Additional exam scorecards (if any)
+
+✅ **Requirements:**
+- 📂 PDF/JPG/PNG formats
+- ⚖️ Under 2MB per file
+
+💡 Tip: Check each institute's specific requirements on the SII Portal
+
+Would you like to know:
+ 👉 Can I upload my documents in my native language?
+ 👉 Can I apply without a passport?
+ 👉 Can I upload documents later?
+ 👉 Accepted file types and size?
+ 👉 Do I need a passport for registration?"
+2025-05-05 09:47:45,Student,Visa,"🛂 Here’s how to apply for a student visa:
+
+1️⃣ Get an admission or offer letter from a Study in India partner institute
+2️⃣ Visit the visa portal: indianvisaonline.gov.in
+3️⃣ Fill out the visa application form and upload the required documents
+4️⃣ Submit your application at the nearest Indian embassy or consulate in your country
+5️⃣ Apply specifically for an S Visa (Student Visa)
+
+📌 Your visa is issued only after your admission is confirmed.
+
+Would you like help with:
+👉 What documents are required?
+👉 Where to find my nearest embassy?
+👉 What is the visa fee?"
+2025-05-05 09:48:08,Student,where to find my nearest embassy?,"Error generating response: Error code: 401 - {'error': {'message': 'Incorrect API key provided: sk-12345*******************************5678. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_api_key'}}"
+2025-05-05 09:48:23,Student,what is the visa fee?,"Error generating response: Error code: 401 - {'error': {'message': 'Incorrect API key provided: sk-12345*******************************5678. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_api_key'}}"
+2025-05-05 09:56:10,Student,About SII Programme,"Hello! 😊 The Study in India (SII) program is a flagship initiative by the Ministry of Education, Government of India. It was launched in 2018 to invite international students to pursue higher education in India's top institutions. 🌏📚
+
+The program connects students with over 100+ top-ranked institutes and offers 2600+ courses across disciplines — from engineering and law to yoga and Ayurveda!
+
+Would you like to know how to apply or explore courses available under SII?
+ 👉 Yes, show me how to apply
+ 👉 I want to browse courses
+ 👉 No, continue"
+2025-05-05 11:58:50,Student,About SII Programme,"Hello! 😊 The Study in India (SII) program is a flagship initiative by the Ministry of Education, Government of India. It was launched in 2018 to invite international students to pursue higher education in India's top institutions. 🌏📚
+
+The program connects students with over 100+ top-ranked institutes and offers 2600+ courses across disciplines — from engineering and law to yoga and Ayurveda!
+
+Would you like to know how to apply or explore courses available under SII?
+ 👉 Yes, show me how to apply
+ 👉 I want to browse courses
+ 👉 No, continue"
+2025-05-05 11:58:58,Student,How to Apply,"To apply to Study in India, follow these steps:
+
+1️⃣ Visit [www.studyinindia.gov.in](https://www.studyinindia.gov.in)
+2️⃣ Register as a new user using your email ID
+3️⃣ Fill out your profile with academic and personal info
+4️⃣ Upload necessary documents (marksheets, passport, etc.)
+5️⃣ Choose and rank your course preferences
+6️⃣ Submit your application — that’s it! ✅
+
+You can track updates and offers through your dashboard after submission.
+
+Need help with:
+ 👉 What documents do I need?
+ 👉 What happens after applying?
+ 👉 I made a mistake. Can I fix it?
+ 👉 Checklist before submitting?"
+2025-05-05 11:59:40,Student,Documents Required,"You'll need to upload these documents while applying:
+
+📄 **Core Documents:**
+- 📕 Passport (or ID proof if passport is under process)
+- 📘 Marksheets (10th & 12th or equivalent)
+- 📑 Degree certificates (if applicable)
+- 🖼️ Passport-size photograph
+
+📌 **Possible Extras:**
+- 🌍 English proficiency test scores
+- 📝 Additional exam scorecards (if any)
+
+✅ **Requirements:**
+- 📂 PDF/JPG/PNG formats
+- ⚖️ Under 2MB per file
+
+💡 Tip: Check each institute's specific requirements on the SII Portal
+
+Would you like to know:
+ 👉 Can I upload my documents in my native language?
+ 👉 Can I apply without a passport?
+ 👉 Can I upload documents later?
+ 👉 Accepted file types and size?
+ 👉 Do I need a passport for registration?"
+2025-05-05 12:00:19,Student,Documents Required,"You'll need to upload these documents while applying:
+
+📄 **Core Documents:**
+- 📕 Passport (or ID proof if passport is under process)
+- 📘 Marksheets (10th & 12th or equivalent)
+- 📑 Degree certificates (if applicable)
+- 🖼️ Passport-size photograph
+
+📌 **Possible Extras:**
+- 🌍 English proficiency test scores
+- 📝 Additional exam scorecards (if any)
+
+✅ **Requirements:**
+- 📂 PDF/JPG/PNG formats
+- ⚖️ Under 2MB per file
+
+💡 Tip: Check each institute's specific requirements on the SII Portal
+
+Would you like to know:
+ 👉 Can I upload my documents in my native language?
+ 👉 Can I apply without a passport?
+ 👉 Can I upload documents later?
+ 👉 Accepted file types and size?
+ 👉 Do I need a passport for registration?"
+2025-05-05 12:50:34,Student,Visa,"🛂 Here’s how to apply for a student visa:
+
+1️⃣ Get an admission or offer letter from a Study in India partner institute
+2️⃣ Visit the visa portal: indianvisaonline.gov.in
+3️⃣ Fill out the visa application form and upload the required documents
+4️⃣ Submit your application at the nearest Indian embassy or consulate in your country
+5️⃣ Apply specifically for an S Visa (Student Visa)
+
+📌 Your visa is issued only after your admission is confirmed.
+
+Would you like help with:
+👉 What documents are required?
+👉 Where to find my nearest embassy?
+👉 What is the visa fee?"
+2025-05-06 20:58:30,Student,Visa,"🛂 Here’s how to apply for a student visa:
+
+1️⃣ Get an admission or offer letter from a Study in India partner institute
+2️⃣ Visit the visa portal: indianvisaonline.gov.in
+3️⃣ Fill out the visa application form and upload the required documents
+4️⃣ Submit your application at the nearest Indian embassy or consulate in your country
+5️⃣ Apply specifically for an S Visa (Student Visa)
+
+📌 Your visa is issued only after your admission is confirmed.
+
+Would you like help with:
+👉 What documents are required?
+👉 Where to find my nearest embassy?
+👉 What is the visa fee?"
+2025-05-06 21:01:26,Student,About SII Programme,"Hello! 😊 The Study in India (SII) program is a flagship initiative by the Ministry of Education, Government of India. It was launched in 2018 to invite international students to pursue higher education in India's top institutions. 🌏📚
+
+The program connects students with over 100+ top-ranked institutes and offers 2600+ courses across disciplines — from engineering and law to yoga and Ayurveda!
+
+Would you like to know how to apply or explore courses available under SII?
+ 👉 Yes, show me how to apply
+ 👉 I want to browse courses
+ 👉 No, continue"
+2025-05-06 21:01:57,Student,How to Apply,"To apply to Study in India, follow these steps:
+
+1️⃣ Visit [www.studyinindia.gov.in](https://www.studyinindia.gov.in)
+2️⃣ Register as a new user using your email ID
+3️⃣ Fill out your profile with academic and personal info
+4️⃣ Upload necessary documents (marksheets, passport, etc.)
+5️⃣ Choose and rank your course preferences
+6️⃣ Submit your application — that’s it! ✅
+
+You can track updates and offers through your dashboard after submission.
+
+Need help with:
+ 👉 What documents do I need?
+ 👉 What happens after applying?
+ 👉 I made a mistake. Can I fix it?
+ 👉 Checklist before submitting?"
+2025-05-06 21:02:00,Student,Documents Required,"You'll need to upload these documents while applying:
+
+📄 **Core Documents:**
+- 📕 Passport (or ID proof if passport is under process)
+- 📘 Marksheets (10th & 12th or equivalent)
+- 📑 Degree certificates (if applicable)
+- 🖼️ Passport-size photograph
+
+📌 **Possible Extras:**
+- 🌍 English proficiency test scores
+- 📝 Additional exam scorecards (if any)
+
+✅ **Requirements:**
+- 📂 PDF/JPG/PNG formats
+- ⚖️ Under 2MB per file
+
+💡 Tip: Check each institute's specific requirements on the SII Portal
+
+Would you like to know:
+ 👉 Can I upload my documents in my native language?
+ 👉 Can I apply without a passport?
+ 👉 Can I upload documents later?
+ 👉 Accepted file types and size?
+ 👉 Do I need a passport for registration?"
+2025-05-06 21:02:03,Student,Visa,"🛂 Here’s how to apply for a student visa:
+
+1️⃣ Get an admission or offer letter from a Study in India partner institute
+2️⃣ Visit the visa portal: indianvisaonline.gov.in
+3️⃣ Fill out the visa application form and upload the required documents
+4️⃣ Submit your application at the nearest Indian embassy or consulate in your country
+5️⃣ Apply specifically for an S Visa (Student Visa)
+
+📌 Your visa is issued only after your admission is confirmed.
+
+Would you like help with:
+👉 What documents are required?
+👉 Where to find my nearest embassy?
+👉 What is the visa fee?"
+2025-05-06 21:02:05,Student,Popular Courses,"Some of the most popular fields are:
+
+⚙️ Engineering & IT
+📈 Business & Management
+⚖️ Law
+🧘 Yoga & Ayurveda
+🧪 Health & Allied Sciences
+
+These courses are available across multiple institutes and cities.
+
+👉 Can I apply to more than one course?
+👉 Are these courses harder to get into due to demand?"
+2025-05-06 21:02:11,Student,Scholarship,"Study in India offers several types of financial support:
+
+🎓 Tuition fee waivers: 100%, 50%, or 25%
+💰 Based on academic merit, scholarship exam scores, and country-specific quotas
+
+Some institutes may also offer:
+✅ Accommodation support
+✅ Food and boarding discounts
+
+Would you like to check:
+ 👉 Am I eligible for a scholarship?
+ 👉 How to apply for a scholarship?
+ 👉 What costs are not covered?"
+2025-05-06 21:02:47,Student,Am I eligible for a scholarship?,"Eligibility is based on:
+
+📚 Academic performance (your marks in high school or college)
+📝 Valid documents and complete application
+🌍 Country of origin (some quotas apply)
+🎓 Course or institute type
+
+Would you like to:
+ 👉 See what documents are required?
+ 👉 Know how much score is needed?
+ 👉 Check if you qualify with pending results?"
+2025-05-06 21:02:57,Student,See what documents are required?,"Error generating response: Error code: 401 - {'error': {'message': 'Incorrect API key provided: sk-12345*******************************5678. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_api_key'}}"
+2025-05-06 21:03:20,Student,About SII Programme,"Hello! 😊 The Study in India (SII) program is a flagship initiative by the Ministry of Education, Government of India. It was launched in 2018 to invite international students to pursue higher education in India's top institutions. 🌏📚
+
+The program connects students with over 100+ top-ranked institutes and offers 2600+ courses across disciplines — from engineering and law to yoga and Ayurveda!
+
+Would you like to know how to apply or explore courses available under SII?
+ 👉 Yes, show me how to apply
+ 👉 I want to browse courses
+ 👉 No, continue"
