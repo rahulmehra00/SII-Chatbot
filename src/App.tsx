@@ -1,6 +1,5 @@
 import React, { useState, useRef, useEffect } from "react";
 import { Send, GraduationCap, MessageSquare, X } from "lucide-react";
-import { faqData } from "./data/faqData";
 import Draggable from "react-draggable";
 import { Copy } from "lucide-react";
 import "bootstrap-icons/font/bootstrap-icons.css";
@@ -21,7 +20,6 @@ interface ContactForm {
 }
 
 function App() {
-  const [userName, setUserName] = useState("");
   const [messages, setMessages] = useState<Message[]>([
     {
       text: `Hi! 😊 I'm the Study in India Assistant. 🎓
@@ -31,7 +29,6 @@ I'm here to help you with queries about the SII program, Courses, Visa Regulatio
     },
   ]);
   const [inputValue, setInputValue] = useState("");
-  const [suggestionValue, setSuggestionValue] = useState("");
   const [isTyping, setIsTyping] = useState(false);
   const [showContactForm, setShowContactForm] = useState(false);
   const [contactForm, setContactForm] = useState<ContactForm>({
@@ -43,7 +40,7 @@ I'm here to help you with queries about the SII program, Courses, Visa Regulatio
   });
   const messagesEndRef = useRef<HTMLDivElement>(null);
 
-  const [copiedIndex, setCopiedIndex] = useState<number | null>(null); //copy state
+  const [copiedIndex, setCopiedIndex] = useState<number | null>(null)
 
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
@@ -53,64 +50,7 @@ I'm here to help you with queries about the SII program, Courses, Visa Regulatio
     scrollToBottom();
   }, [messages]);
 
-  const findSimilarQuestions = (input: string): string[] => {
-    const inputLower = input.toLowerCase();
-    const similarQuestions: Array<{ question: string; score: number }> = [];
-
-    Object.values(faqData).forEach((category) => {
-      Object.keys(category).forEach((question) => {
-        const questionLower = question.toLowerCase();
-        const words = inputLower.split(" ");
-        let score = 0;
-
-        words.forEach((word) => {
-          if (questionLower.includes(word)) score += 1;
-        });
-
-        if (score > 0) {
-          similarQuestions.push({ question, score });
-        }
-      });
-    });
-
-    return similarQuestions
-      .sort((a, b) => b.score - a.score)
-      .slice(0, 3)
-      .map((q) => q.question);
-  };
-
-  const findBestMatch = (
-    input: string
-  ): { text: string; similarQuestions: string[] } => {
-    const inputLower = input.toLowerCase();
-    let bestMatch = {
-      text: "I apologize, but I couldn't find a specific answer to your question. You can try asking about SII Programme, admissions, visa, costs, or course. Or, you can contact our helpdesk for personalized assistance.",
-      score: 0,
-    };
-
-    Object.entries(faqData).forEach(([category, questions]) => {
-      Object.entries(questions).forEach(([question, answer]) => {
-        const questionLower = question.toLowerCase();
-        const words = inputLower.split(" ");
-        let score = 0;
-
-        words.forEach((word) => {
-          if (questionLower.includes(word)) score += 1;
-          if (category.toLowerCase().includes(word)) score += 0.5;
-        });
-
-        if (score > bestMatch.score) {
-          bestMatch = {
-            text: answer,
-            score: score,
-          };
-        }
-      });
-    });
-
-    const similarQuestions = findSimilarQuestions(input);
-    return { text: bestMatch.text, similarQuestions };
-  };
+  
 
   const copyToClipboard = (text: string, index: number): void => {
     navigator.clipboard.writeText(text).then(() => {
@@ -189,29 +129,25 @@ I'm here to help you with queries about the SII program, Courses, Visa Regulatio
     ]);
   };
 
-  const handleSubmit = async (
-    
-    e: React.FormEvent,
-    customInput?: string
-  ) => {
+  const handleSubmit = async (e: React.FormEvent, customInput?: string) => {
     e.preventDefault();
     const messageText = customInput ?? inputValue;
-  
+
     if (!messageText.trim()) return;
-  
+
     const userMessage = {
       text: messageText,
       isUser: true,
       timestamp: new Date(),
     };
-  
+
     setMessages((prev) => [...prev, userMessage]);
     setInputValue(""); // clear only the input box
     setIsTyping(true);
-  
+
     try {
       const username = "Student";
-  
+
       const response = await fetch("http://127.0.0.1:5000/api/chat", {
         method: "POST",
         headers: {
@@ -222,7 +158,7 @@ I'm here to help you with queries about the SII program, Courses, Visa Regulatio
           username: username,
         }),
       });
-  
+
       if (response.ok) {
         const data = await response.json();
         const botMessage = {
@@ -239,6 +175,19 @@ I'm here to help you with queries about the SII program, Courses, Visa Regulatio
     } finally {
       setIsTyping(false);
     }
+  };
+ 
+  const handleIsHelpfulClick = (feedback: string) => {
+    fetch("http://localhost:5000/api/user-feedback", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        feedback,
+        username: "user"
+      })
+    })
   };
   
 
@@ -404,7 +353,7 @@ I'm here to help you with queries about the SII program, Courses, Visa Regulatio
             >
               Documents Required
             </button>
-            
+
             <button
               type="button"
               onClick={(e) => handleSubmit(e as any, "Visa")}
@@ -427,20 +376,27 @@ I'm here to help you with queries about the SII program, Courses, Visa Regulatio
               Scholarship
             </button>
 
-            {/* <button
-              onClick={handleHelpfulBtn}
+            <button
+              onClick={() => {
+                handleHelpfulBtn();
+                handleIsHelpfulClick("Helpful");
+              }}
               className="helpful-btn mr-4 border-2 border-orange-500 text-orange-500 p-1 rounded-lg"
             >
               Helpful
-              <i className="bi bi-hand-thumbs-up "></i>
+              <i className="bi bi-hand-thumbs-up"></i>
             </button>
+
             <button
-              onClick={handleNotHelpfulBtn}
+              onClick={() => {
+                handleNotHelpfulBtn();
+                handleIsHelpfulClick("Not Helpful");
+              }}
               className="nothelpful-btn border-2 border-orange-500 text-orange-500 p-1 rounded-lg"
             >
               Not Helpful
               <i className="bi bi-hand-thumbs-down"></i>
-            </button> */}
+            </button>
 
             {<div ref={messagesEndRef} />}
           </div>
@@ -593,13 +549,3 @@ I'm here to help you with queries about the SII program, Courses, Visa Regulatio
 
 export default App;
 
-// I can help you with information about:
-// ➡️ Study in India programme
-// ➡️ Registration
-// ➡️ Fee Structure
-// ➡️ Courses
-// ➡️ Globally Accepted Degrees
-// ➡️ English Language Skills
-// ➡️ Visa Regulation
-// ➡️ Admissions
-// What would you like to know?
