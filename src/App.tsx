@@ -214,334 +214,332 @@ I'm here to help you with queries about the SII program, Courses, Visa Regulatio
 
   return (
     // <Draggable cancel=".no-drag">
-      <div
-        className="fixed bottom-4 right-4 z-50 mainDiv  max-h-[100vh]  rounded-2xl shadow-xl"
-        style={{ resize: "both" }}
-      >
-        <div className="max-w-4xl mx-auto bg-white rounded-2xl shadow-xl overflow-hidden">
-          {/* Header */}
-          <div style={{ backgroundColor: "#073a7d" }} className="p-[10px]">
-            <div className="flex items-center space-x-4">
-              <GraduationCap className="text-white w-8 h-8" />
-              <div>
-                <h1
-                  style={{ fontFamily: "'Play', sans-serif" }}
-                  className="text-2xl font-bold text-white"
-                >
-                  Study in India Assistant
-                </h1>
-
-                <p className="text-indigo-200">
-                  Your guide to studying in India
-                </p>
-              </div>
-            </div>
-          </div>
-
-          {/* Chat Messages */}
-          <div className="mainCont p-6 space-y-4">
-            {messages.map((message, index) => (
-              <div
-                key={index}
-                className={`flex ${
-                  message.isUser ? "justify-end" : "justify-start"
-                }`}
-              >
-                <div
-                  className={`max-w-[80%] rounded-2xl p-4 relative ${
-                    message.isUser
-                      ? "bg-indigo-600 text-white"
-                      : "bg-gray-100 text-gray-800"
-                  }`}
-                >
-                  <div className="flex items-center space-x-2 mb-1">
-                    {!message.isUser && <MessageSquare className="w-4 h-4" />}
-                    <span className="text-xs opacity-75">
-                      {message.timestamp.toLocaleTimeString()}
-                    </span>
-                  </div>
-
-                  <p
-                    style={{ fontFamily: "'Play', sans-serif" }}
-                    className="whitespace-pre-wrap break-words overflow-hidden select-text cursor-text no-drag"
-                    onMouseDown={(e) => e.stopPropagation()}
-                    onMouseUp={(e) => e.stopPropagation()}
-                  >
-                    {message.text}
-                  </p>
-
-                  {/*Copy Icon} */}
-                  {!message.isUser && (
-                    <div>
-                      <button
-                        onClick={() => copyToClipboard(message.text, index)}
-                        className="absolute top-2 right-2 p-1 text-gray-500 hover:text-gray-800"
-                        title="Copy message"
-                      >
-                        <Copy className="w-4 h-4" />
-                      </button>
-
-                      {copiedIndex === index && (
-                        <span className="absolute top-0 right-10 text-sm text-green-500">
-                          Copied!
-                        </span>
-                      )}
-                    </div>
-                  )}
-
-                  {/* Similar Questions */}
-                  {!message.isUser &&
-                    message.similarQuestions &&
-                    message.similarQuestions.length > 0 && (
-                      <div className="mt-3 space-y-2">
-                        <p className="text-sm font-medium">
-                          Similar questions you might be interested in:
-                        </p>
-                        <ul className="space-y-1">
-                          {message.similarQuestions.map((question, idx) => (
-                            <li key={idx} className="text-sm">
-                              • {question}
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-                    )}
-                </div>
-              </div>
-            ))}
-            {isTyping && (
-              <div className="flex justify-start">
-                <div className="bg-gray-100 rounded-2xl p-4">
-                  <div className="flex space-x-2">
-                    <div
-                      className="w-2 h-2 bg-gray-400 rounded-full animate-bounce"
-                      style={{ animationDelay: "0ms" }}
-                    />
-                    <div
-                      className="w-2 h-2 bg-gray-400 rounded-full animate-bounce"
-                      style={{ animationDelay: "200ms" }}
-                    />
-                    <div
-                      className="w-2 h-2 bg-gray-400 rounded-full animate-bounce"
-                      style={{ animationDelay: "400ms" }}
-                    />
-                  </div>
-                </div>
-              </div>
-            )}
-            <div className="buttonsDiv">
-              <button
-                type="button"
-                onClick={(e) => handleSubmit(e as any, "About SII Programme")}
-                className="border-2  border-sky-600 text-sky-600 p-1 rounded-lg"
-              >
-                About SII Programme
-              </button>
-              <button
-                type="button"
-                onClick={(e) => handleSubmit(e as any, "How to Apply")}
-                className="border-2 border-sky-600 text-sky-600 p-1 rounded-lg"
-              >
-                How to Apply
-              </button>
-
-              <button
-                type="button"
-                onClick={(e) => handleSubmit(e as any, "Documents Required")}
-                className="border-2  border-sky-600 text-sky-600 p-1 rounded-lg"
-              >
-                Documents Required
-              </button>
-
-              <button
-                type="button"
-                onClick={(e) => handleSubmit(e as any, "Visa")}
-                className="border-2 border-sky-600 text-sky-600 p-1 rounded-lg"
-              >
-                Visa
-              </button>
-              <button
-                type="button"
-                onClick={(e) => handleSubmit(e as any, "Popular Courses")}
-                className="border-2  border-sky-600 text-sky-600 p-1 rounded-lg"
-              >
-                Popular Courses
-              </button>
-              <button
-                type="button"
-                onClick={(e) => handleSubmit(e as any, "Scholarship")}
-                className="border-2 border-sky-600 text-sky-600 p-1 rounded-lg"
-              >
-                Scholarship
-              </button>
-
-              <button
-                onClick={() => {
-                  handleHelpfulBtn();
-                  handleIsHelpfulClick("Helpful");
-                }}
-                className="helpful-btn border-2 border-orange-500 text-orange-500 p-1 rounded-lg"
-              >
-                Helpful
-                <i className="bi bi-hand-thumbs-up"></i>
-              </button>
-
-              <button
-                onClick={() => {
-                  handleNotHelpfulBtn();
-                  handleIsHelpfulClick("Not Helpful");
-                }}
-                className="nothelpful-btn border-2 border-orange-500 text-orange-500 p-1 rounded-lg"
-              >
-                Not Helpful
-                <i className="bi bi-hand-thumbs-down"></i>
-              </button>
-            </div>
-            {<div ref={messagesEndRef} />}
-          </div>
-
-          {/* Input Form */}
-          <form
-            onSubmit={handleSubmit}
-            className="p-4 border-t border-gray-200"
-          >
-            <div className="flex space-x-4">
-              <input
+    <div
+      className="fixed bottom-4 right-4 z-50 mainDiv  max-h-[100vh]  rounded-2xl shadow-xl"
+      style={{ resize: "both" }}
+    >
+      <div className="max-w-4xl mx-auto bg-white rounded-2xl shadow-xl overflow-hidden">
+        {/* Header */}
+        <div style={{ backgroundColor: "#073a7d" }} className="p-[10px]">
+          <div className="flex items-center space-x-4">
+            <GraduationCap className="text-white w-8 h-8" />
+            <div>
+              <h1
                 style={{ fontFamily: "'Play', sans-serif" }}
-                type="text"
-                value={inputValue}
-                onChange={(e) => setInputValue(e.target.value)}
-                placeholder="Ask about admissions, visa, costs, or course..."
-                className="flex-1 rounded-lg border border-gray-300 px-4 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
-              />
-              <button
-                type="submit"
-                className="text-white rounded-lg px-6 py-2 focus:outline-none focus:ring-2 focus:ring-[#f57f18] focus:ring-offset-2 transition-colors duration-200 flex items-center space-x-2"
-                style={{ backgroundColor: "#f57f18" }}
-                onMouseEnter={(e) =>
-                  (e.currentTarget.style.backgroundColor = "#c95f00")
-                }
-                onMouseLeave={(e) =>
-                  (e.currentTarget.style.backgroundColor = "#f57f18")
-                }
+                className="text-2xl font-bold text-white"
               >
-                <span style={{ fontFamily: "'Play', sans-serif" }}>Send</span>
+                Study in India Assistant
+              </h1>
 
-                <Send className="w-4 h-4" />
-              </button>
+              <p className="text-indigo-200">Your guide to studying in India</p>
             </div>
-          </form>
+          </div>
         </div>
 
-        {/* Contact Form Modal */}
-        {showContactForm && (
-          <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4">
-            <div className="bg-white rounded-2xl p-6 max-w-md w-full">
-              <div className="flex justify-between items-center mb-4">
-                <h2 className="text-xl font-semibold">Contact Helpdesk</h2>
-                <button
-                  onClick={() => setShowContactForm(false)}
-                  className="text-gray-500 hover:text-gray-700"
+        {/* Chat Messages */}
+        <div className="mainCont p-6 space-y-4">
+          {messages.map((message, index) => (
+            <div
+              key={index}
+              className={`flex ${
+                message.isUser ? "justify-end" : "justify-start"
+              }`}
+            >
+              <div
+                className={`max-w-[80%] rounded-2xl p-4 relative ${
+                  message.isUser
+                    ? "bg-indigo-600 text-white"
+                    : "bg-gray-100 text-gray-800"
+                }`}
+              >
+                <div className="flex items-center space-x-2 mb-1">
+                  {!message.isUser && <MessageSquare className="w-4 h-4" />}
+                  <span className="text-xs opacity-75">
+                    {message.timestamp.toLocaleTimeString()}
+                  </span>
+                </div>
+
+                <p
+                  style={{ fontFamily: "'Play', sans-serif" }}
+                  className="whitespace-pre-wrap break-words overflow-hidden select-text cursor-text no-drag"
+                  onMouseDown={(e) => e.stopPropagation()}
+                  onMouseUp={(e) => e.stopPropagation()}
                 >
-                  <X className="w-6 h-6" />
-                </button>
+                  {message.text}
+                </p>
+
+                {/*Copy Icon} */}
+                {!message.isUser && (
+                  <div>
+                    <button
+                      onClick={() => copyToClipboard(message.text, index)}
+                      className="absolute top-2 right-2 p-1 text-gray-500 hover:text-gray-800"
+                      title="Copy message"
+                    >
+                      <Copy className="w-4 h-4" />
+                    </button>
+
+                    {copiedIndex === index && (
+                      <span className="absolute top-0 right-10 text-sm text-green-500">
+                        Copied!
+                      </span>
+                    )}
+                  </div>
+                )}
+
+                {/* Similar Questions */}
+                {!message.isUser &&
+                  message.similarQuestions &&
+                  message.similarQuestions.length > 0 && (
+                    <div className="mt-3 space-y-2">
+                      <p className="text-sm font-medium">
+                        Similar questions you might be interested in:
+                      </p>
+                      <ul className="space-y-1">
+                        {message.similarQuestions.map((question, idx) => (
+                          <li key={idx} className="text-sm">
+                            • {question}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
               </div>
-              <form onSubmit={handleContactSubmit} className="space-y-4">
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-1">
-                    Name
-                  </label>
-                  <input
-                    type="text"
-                    required
-                    value={contactForm.name}
-                    onChange={(e) =>
-                      setContactForm((prev) => ({
-                        ...prev,
-                        name: e.target.value,
-                      }))
-                    }
-                    className="w-full rounded-lg border border-gray-300 px-4 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500"
-                  />
-                </div>
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-1">
-                    Email
-                  </label>
-                  <input
-                    type="email"
-                    required
-                    value={contactForm.email}
-                    onChange={(e) =>
-                      setContactForm((prev) => ({
-                        ...prev,
-                        email: e.target.value,
-                      }))
-                    }
-                    className="w-full rounded-lg border border-gray-300 px-4 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500"
-                  />
-                </div>
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-1">
-                    Phone
-                  </label>
-                  <input
-                    type="tel"
-                    required
-                    value={contactForm.phone}
-                    onChange={(e) =>
-                      setContactForm((prev) => ({
-                        ...prev,
-                        phone: e.target.value,
-                      }))
-                    }
-                    className="w-full rounded-lg border border-gray-300 px-4 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500"
-                  />
-                </div>
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-1">
-                    Country
-                  </label>
-                  <input
-                    type="text"
-                    required
-                    value={contactForm.country}
-                    onChange={(e) =>
-                      setContactForm((prev) => ({
-                        ...prev,
-                        country: e.target.value,
-                      }))
-                    }
-                    className="w-full rounded-lg border border-gray-300 px-4 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500"
-                  />
-                </div>
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-1">
-                    Query
-                  </label>
-                  <textarea
-                    required
-                    value={contactForm.query}
-                    onChange={(e) =>
-                      setContactForm((prev) => ({
-                        ...prev,
-                        query: e.target.value,
-                      }))
-                    }
-                    className="w-full rounded-lg border border-gray-300 px-4 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500 h-24"
-                  />
-                </div>
-                <button
-                  type="submit"
-                  className="w-full bg-indigo-600 text-white rounded-lg px-6 py-2 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 transition-colors duration-200"
-                >
-                  Submit
-                </button>
-              </form>
             </div>
+          ))}
+          {isTyping && (
+            <div className="flex justify-start">
+              <div className="bg-gray-100 rounded-2xl p-4">
+                <div className="flex space-x-2">
+                  <div
+                    className="w-2 h-2 bg-gray-400 rounded-full animate-bounce"
+                    style={{ animationDelay: "0ms" }}
+                  />
+                  <div
+                    className="w-2 h-2 bg-gray-400 rounded-full animate-bounce"
+                    style={{ animationDelay: "200ms" }}
+                  />
+                  <div
+                    className="w-2 h-2 bg-gray-400 rounded-full animate-bounce"
+                    style={{ animationDelay: "400ms" }}
+                  />
+                </div>
+              </div>
+            </div>
+          )}
+          <div className="buttonsDiv">
+            <button
+              type="button"
+              onClick={(e) => handleSubmit(e as any, "About SII Programme")}
+              className="border-2  border-sky-600 text-sky-600 p-1 rounded-lg"
+            >
+              About SII Programme
+            </button>
+            <button
+              type="button"
+              onClick={(e) => handleSubmit(e as any, "How to Apply")}
+              className="border-2 border-sky-600 text-sky-600 p-1 rounded-lg"
+            >
+              How to Apply
+            </button>
+
+            <button
+              type="button"
+              onClick={(e) => handleSubmit(e as any, "Documents Required")}
+              className="border-2  border-sky-600 text-sky-600 p-1 rounded-lg"
+            >
+              Documents Required
+            </button>
+
+            <button
+              type="button"
+              onClick={(e) => handleSubmit(e as any, "Visa")}
+              className="border-2 border-sky-600 text-sky-600 p-1 rounded-lg"
+            >
+              Visa
+            </button>
+            <button
+              type="button"
+              onClick={(e) => handleSubmit(e as any, "Popular Courses")}
+              className="border-2  border-sky-600 text-sky-600 p-1 rounded-lg"
+            >
+              Popular Courses
+            </button>
+            <button
+              type="button"
+              onClick={(e) => handleSubmit(e as any, "Scholarship")}
+              className="border-2 border-sky-600 text-sky-600 p-1 rounded-lg"
+            >
+              Scholarship
+            </button>
+
+            <button
+              onClick={() => {
+                handleHelpfulBtn();
+                handleIsHelpfulClick("Helpful");
+              }}
+              className="helpful-btn border-2 border-orange-500 text-orange-500 p-1 rounded-lg"
+            >
+              Helpful
+              <i className="bi bi-hand-thumbs-up"></i>
+            </button>
+
+            <button
+              onClick={() => {
+                handleNotHelpfulBtn();
+                handleIsHelpfulClick("Not Helpful");
+              }}
+              className="nothelpful-btn border-2 border-orange-500 text-orange-500 p-1 rounded-lg"
+            >
+              Not Helpful
+              <i className="bi bi-hand-thumbs-down"></i>
+            </button>
           </div>
-        )}
+          {<div ref={messagesEndRef} />}
+        </div>
+
+        {/* Input Form */}
+        <form
+          onSubmit={handleSubmit}
+          className="p-4 border-t border-gray-200 bottomChat"
+        >
+          <div className="flex space-x-4">
+            <input
+              style={{ fontFamily: "'Play', sans-serif" }}
+              type="text"
+              value={inputValue}
+              onChange={(e) => setInputValue(e.target.value)}
+              placeholder="Ask about admissions, visa, costs, or course..."
+              className="flex-1 rounded-lg border border-gray-300 px-4 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
+            />
+            <button
+              type="submit"
+              className="text-white rounded-lg px-6 py-2 focus:outline-none focus:ring-2 focus:ring-[#f57f18] focus:ring-offset-2 transition-colors duration-200 flex items-center space-x-2"
+              style={{ backgroundColor: "#f57f18" }}
+              onMouseEnter={(e) =>
+                (e.currentTarget.style.backgroundColor = "#c95f00")
+              }
+              onMouseLeave={(e) =>
+                (e.currentTarget.style.backgroundColor = "#f57f18")
+              }
+            >
+              <span style={{ fontFamily: "'Play', sans-serif" }}>Send</span>
+
+              <Send className="w-4 h-4" />
+            </button>
+          </div>
+        </form>
       </div>
+
+      {/* Contact Form Modal */}
+      {showContactForm && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4">
+          <div className="bg-white rounded-2xl p-6 max-w-md w-full">
+            <div className="flex justify-between items-center mb-4">
+              <h2 className="text-xl font-semibold">Contact Helpdesk</h2>
+              <button
+                onClick={() => setShowContactForm(false)}
+                className="text-gray-500 hover:text-gray-700"
+              >
+                <X className="w-6 h-6" />
+              </button>
+            </div>
+            <form onSubmit={handleContactSubmit} className="space-y-4">
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-1">
+                  Name
+                </label>
+                <input
+                  type="text"
+                  required
+                  value={contactForm.name}
+                  onChange={(e) =>
+                    setContactForm((prev) => ({
+                      ...prev,
+                      name: e.target.value,
+                    }))
+                  }
+                  className="w-full rounded-lg border border-gray-300 px-4 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                />
+              </div>
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-1">
+                  Email
+                </label>
+                <input
+                  type="email"
+                  required
+                  value={contactForm.email}
+                  onChange={(e) =>
+                    setContactForm((prev) => ({
+                      ...prev,
+                      email: e.target.value,
+                    }))
+                  }
+                  className="w-full rounded-lg border border-gray-300 px-4 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                />
+              </div>
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-1">
+                  Phone
+                </label>
+                <input
+                  type="tel"
+                  required
+                  value={contactForm.phone}
+                  onChange={(e) =>
+                    setContactForm((prev) => ({
+                      ...prev,
+                      phone: e.target.value,
+                    }))
+                  }
+                  className="w-full rounded-lg border border-gray-300 px-4 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                />
+              </div>
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-1">
+                  Country
+                </label>
+                <input
+                  type="text"
+                  required
+                  value={contactForm.country}
+                  onChange={(e) =>
+                    setContactForm((prev) => ({
+                      ...prev,
+                      country: e.target.value,
+                    }))
+                  }
+                  className="w-full rounded-lg border border-gray-300 px-4 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                />
+              </div>
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-1">
+                  Query
+                </label>
+                <textarea
+                  required
+                  value={contactForm.query}
+                  onChange={(e) =>
+                    setContactForm((prev) => ({
+                      ...prev,
+                      query: e.target.value,
+                    }))
+                  }
+                  className="w-full rounded-lg border border-gray-300 px-4 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500 h-24"
+                />
+              </div>
+              <button
+                type="submit"
+                className="w-full bg-indigo-600 text-white rounded-lg px-6 py-2 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 transition-colors duration-200"
+              >
+                Submit
+              </button>
+            </form>
+          </div>
+        </div>
+      )}
+    </div>
     // </Draggable>
   );
 }
