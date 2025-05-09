@@ -3,6 +3,7 @@ import { Send, GraduationCap, MessageSquare, X } from "lucide-react";
 import Draggable from "react-draggable";
 import { Copy } from "lucide-react";
 import "bootstrap-icons/font/bootstrap-icons.css";
+import "./apps.css";
 
 interface Message {
   text: string;
@@ -40,7 +41,7 @@ I'm here to help you with queries about the SII program, Courses, Visa Regulatio
   });
   const messagesEndRef = useRef<HTMLDivElement>(null);
 
-  const [copiedIndex, setCopiedIndex] = useState<number | null>(null)
+  const [copiedIndex, setCopiedIndex] = useState<number | null>(null);
 
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
@@ -49,8 +50,6 @@ I'm here to help you with queries about the SII program, Courses, Visa Regulatio
   useEffect(() => {
     scrollToBottom();
   }, [messages]);
-
-  
 
   const copyToClipboard = (text: string, index: number): void => {
     navigator.clipboard.writeText(text).then(() => {
@@ -176,20 +175,19 @@ I'm here to help you with queries about the SII program, Courses, Visa Regulatio
       setIsTyping(false);
     }
   };
- 
+
   const handleIsHelpfulClick = (feedback: string) => {
     fetch("http://localhost:5000/api/user-feedback", {
       method: "POST",
       headers: {
-        "Content-Type": "application/json"
+        "Content-Type": "application/json",
       },
       body: JSON.stringify({
         feedback,
-        username: "user"
-      })
-    })
+        username: "user",
+      }),
+    });
   };
-  
 
   const handleContactSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -217,7 +215,7 @@ I'm here to help you with queries about the SII program, Courses, Visa Regulatio
   return (
     <Draggable cancel=".no-drag">
       <div
-        className="fixed bottom-4 right-4 z-50 w-[50vh] max-h-[100vh]  rounded-2xl shadow-xl"
+        className="fixed bottom-4 right-4 z-50 mainDiv  max-h-[100vh]  rounded-2xl shadow-xl"
         style={{ resize: "both" }}
       >
         <div className="max-w-4xl mx-auto bg-white rounded-2xl shadow-xl overflow-hidden">
@@ -241,7 +239,7 @@ I'm here to help you with queries about the SII program, Courses, Visa Regulatio
           </div>
 
           {/* Chat Messages */}
-          <div className="h-[500px] overflow-y-auto p-6 space-y-4">
+          <div className="mainCont p-6 space-y-4">
             {messages.map((message, index) => (
               <div
                 key={index}
@@ -331,73 +329,74 @@ I'm here to help you with queries about the SII program, Courses, Visa Regulatio
                 </div>
               </div>
             )}
-            <button
-              type="button"
-              onClick={(e) => handleSubmit(e as any, "About SII Programme")}
-              className="border-2 mr-2 border-sky-600 text-sky-600 p-1 rounded-lg"
-            >
-              About SII Programme
-            </button>
-            <button
-              type="button"
-              onClick={(e) => handleSubmit(e as any, "How to Apply")}
-              className="border-2 border-sky-600 text-sky-600 p-1 rounded-lg"
-            >
-              How to Apply
-            </button>
+            <div className="buttonsDiv">
+              <button
+                type="button"
+                onClick={(e) => handleSubmit(e as any, "About SII Programme")}
+                className="border-2  border-sky-600 text-sky-600 p-1 rounded-lg"
+              >
+                About SII Programme
+              </button>
+              <button
+                type="button"
+                onClick={(e) => handleSubmit(e as any, "How to Apply")}
+                className="border-2 border-sky-600 text-sky-600 p-1 rounded-lg"
+              >
+                How to Apply
+              </button>
 
-            <button
-              type="button"
-              onClick={(e) => handleSubmit(e as any, "Documents Required")}
-              className="border-2 mr-2 border-sky-600 text-sky-600 p-1 rounded-lg"
-            >
-              Documents Required
-            </button>
+              <button
+                type="button"
+                onClick={(e) => handleSubmit(e as any, "Documents Required")}
+                className="border-2  border-sky-600 text-sky-600 p-1 rounded-lg"
+              >
+                Documents Required
+              </button>
 
-            <button
-              type="button"
-              onClick={(e) => handleSubmit(e as any, "Visa")}
-              className="border-2 border-sky-600 text-sky-600 p-1 rounded-lg"
-            >
-              Visa
-            </button>
-            <button
-              type="button"
-              onClick={(e) => handleSubmit(e as any, "Popular Courses")}
-              className="border-2 mr-2 border-sky-600 text-sky-600 p-1 rounded-lg"
-            >
-              Popular Courses
-            </button>
-            <button
-              type="button"
-              onClick={(e) => handleSubmit(e as any, "Scholarship")}
-              className="border-2 border-sky-600 text-sky-600 p-1 rounded-lg"
-            >
-              Scholarship
-            </button>
+              <button
+                type="button"
+                onClick={(e) => handleSubmit(e as any, "Visa")}
+                className="border-2 border-sky-600 text-sky-600 p-1 rounded-lg"
+              >
+                Visa
+              </button>
+              <button
+                type="button"
+                onClick={(e) => handleSubmit(e as any, "Popular Courses")}
+                className="border-2  border-sky-600 text-sky-600 p-1 rounded-lg"
+              >
+                Popular Courses
+              </button>
+              <button
+                type="button"
+                onClick={(e) => handleSubmit(e as any, "Scholarship")}
+                className="border-2 border-sky-600 text-sky-600 p-1 rounded-lg"
+              >
+                Scholarship
+              </button>
 
-            <button
-              onClick={() => {
-                handleHelpfulBtn();
-                handleIsHelpfulClick("Helpful");
-              }}
-              className="helpful-btn mr-4 border-2 border-orange-500 text-orange-500 p-1 rounded-lg"
-            >
-              Helpful
-              <i className="bi bi-hand-thumbs-up"></i>
-            </button>
+              <button
+                onClick={() => {
+                  handleHelpfulBtn();
+                  handleIsHelpfulClick("Helpful");
+                }}
+                className="helpful-btn border-2 border-orange-500 text-orange-500 p-1 rounded-lg"
+              >
+                Helpful
+                <i className="bi bi-hand-thumbs-up"></i>
+              </button>
 
-            <button
-              onClick={() => {
-                handleNotHelpfulBtn();
-                handleIsHelpfulClick("Not Helpful");
-              }}
-              className="nothelpful-btn border-2 border-orange-500 text-orange-500 p-1 rounded-lg"
-            >
-              Not Helpful
-              <i className="bi bi-hand-thumbs-down"></i>
-            </button>
-
+              <button
+                onClick={() => {
+                  handleNotHelpfulBtn();
+                  handleIsHelpfulClick("Not Helpful");
+                }}
+                className="nothelpful-btn border-2 border-orange-500 text-orange-500 p-1 rounded-lg"
+              >
+                Not Helpful
+                <i className="bi bi-hand-thumbs-down"></i>
+              </button>
+            </div>
             {<div ref={messagesEndRef} />}
           </div>
 
@@ -548,4 +547,3 @@ I'm here to help you with queries about the SII program, Courses, Visa Regulatio
 }
 
 export default App;
-
