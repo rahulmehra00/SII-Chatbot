@@ -213,7 +213,7 @@ I'm here to help you with queries about the SII program, Courses, Visa Regulatio
   };
 
   return (
-    <Draggable cancel=".no-drag">
+    // <Draggable cancel=".no-drag">
       <div
         className="fixed bottom-4 right-4 z-50 mainDiv  max-h-[100vh]  rounded-2xl shadow-xl"
         style={{ resize: "both" }}
@@ -542,7 +542,7 @@ I'm here to help you with queries about the SII program, Courses, Visa Regulatio
           </div>
         )}
       </div>
-    </Draggable>
+    // </Draggable>
   );
 }
 
