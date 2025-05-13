@@ -147,7 +147,7 @@ I'm here to help you with queries about the SII program, Courses, Visa Regulatio
     try {
       const username = "Student";
 
-      const response = await fetch("http://127.0.0.1:5000/api/chat", {
+      const response = await fetch("https://sii-chatbot.vercel.app/api/chat", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
