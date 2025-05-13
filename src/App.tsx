@@ -147,7 +147,7 @@ I'm here to help you with queries about the SII program, Courses, Visa Regulatio
     try {
       const username = "Student";
 
-      const response = await fetch("src/data/data.json", {
+      const response = await fetch("../assets/data.json", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
