@@ -214,11 +214,8 @@ I'm here to help you with queries about the SII program, Courses, Visa Regulatio
 
   return (
     // <Draggable cancel=".no-drag">
-    <div
-      className="mainDiv rounded-2xl shadow-xl"
-      style={{ resize: "both" }}
-    >
-      <div className="max-w-4xl mx-auto bg-white rounded-2xl shadow-xl overflow-hidden">
+    <div className="mainDiv " style={{ resize: "both" }}>
+      <div className="max-w-4xl mx-auto bg-white  overflow-hidden">
         {/* Header */}
         <div style={{ backgroundColor: "#073a7d" }} className="p-[10px]">
           <div className="flex items-center space-x-4">
