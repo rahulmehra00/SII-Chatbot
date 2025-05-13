@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
 import { Send, GraduationCap, MessageSquare, X } from "lucide-react";
-import Draggable from "react-draggable";
+// import Draggable from "react-draggable";
 import { Copy } from "lucide-react";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import "./apps.css";
@@ -215,7 +215,7 @@ I'm here to help you with queries about the SII program, Courses, Visa Regulatio
   return (
     // <Draggable cancel=".no-drag">
     <div
-      className="fixed bottom-4 right-4 z-50 mainDiv  max-h-[100vh]  rounded-2xl shadow-xl"
+      className="mainDiv rounded-2xl shadow-xl"
       style={{ resize: "both" }}
     >
       <div className="max-w-4xl mx-auto bg-white rounded-2xl shadow-xl overflow-hidden">
