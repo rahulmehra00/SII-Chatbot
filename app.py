@@ -12,12 +12,20 @@ from dotenv import load_dotenv
 from fuzzywuzzy import process
 
 
+
 # Load environment variables
 load_dotenv()
 client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
 app = Flask(__name__)
-CORS(app)
+# Configure CORS with specific options
+CORS(app, resources={
+    r"/api/*": {
+        "origins": ["https://sii-chatbot.vercel.app", "http://localhost:3000"],
+        "methods": ["GET", "POST", "OPTIONS"],
+        "allow_headers": ["Content-Type", "Authorization"]
+    }
+})
 
 # Load data
 with open('src/data/data.json', 'r', encoding='utf-8') as file:

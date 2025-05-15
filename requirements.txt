@@ -1,0 +1,9 @@
+flask
+flask-cors
+sentence-transformers
+faiss-cpu
+openai
+python-dotenv
+fuzzywuzzy
+python-Levenshtein  # Optional but recommended for better performance with fuzzywuzzy
+numpy 

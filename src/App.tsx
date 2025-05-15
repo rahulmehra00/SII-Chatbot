@@ -5,6 +5,8 @@ import { Copy } from "lucide-react";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import "./apps.css";
 
+
+
 interface Message {
   text: string;
   isUser: boolean;
