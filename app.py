@@ -26,12 +26,12 @@ CORS(app, resources={r"/api/*": {"origins": "https://sii-chatbot.vercel.app"}},
      methods=["GET", "POST", "OPTIONS"])
 
 # Add CORS headers to all responses
-@app.after_request
-def after_request(response):
-    response.headers.add('Access-Control-Allow-Origin', 'https://sii-chatbot.vercel.app')
-    response.headers.add('Access-Control-Allow-Headers', 'Content-Type')
-    response.headers.add('Access-Control-Allow-Methods', 'GET,POST,OPTIONS')
-    return response
+# @app.after_request
+# def after_request(response):
+#     response.headers.add('Access-Control-Allow-Origin', 'https://sii-chatbot.vercel.app')
+#     response.headers.add('Access-Control-Allow-Headers', 'Content-Type')
+#     response.headers.add('Access-Control-Allow-Methods', 'GET,POST,OPTIONS')
+#     return response
 
 
 # Load data
