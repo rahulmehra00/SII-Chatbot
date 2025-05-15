@@ -147,16 +147,19 @@ I'm here to help you with queries about the SII program, Courses, Visa Regulatio
     try {
       const username = "Student";
 
-      const response = await fetch("http://103.115.194.119/demo/data.json", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          message: messageText,
-          username: username,
-        }),
-      });
+      const response = await fetch(
+        "https://demodata.businesstowork.com/data.json",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            message: messageText,
+            username: username,
+          }),
+        }
+      );
 
       if (response.ok) {
         const data = await response.json();
