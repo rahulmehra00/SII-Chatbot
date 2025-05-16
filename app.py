@@ -11,28 +11,19 @@ from openai import OpenAI
 from dotenv import load_dotenv
 from fuzzywuzzy import process
 
-
-
 # Load environment variables
 load_dotenv()
 client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
-
 app = Flask(__name__)
 
-# Correct setup: allow all /api/* routes from your deployed frontend
-CORS(app, resources={r"/api/*": {"origins": "https://sii-chatbot.vercel.app"}},
-     supports_credentials=True,
-     allow_headers=["Content-Type"],
-     methods=["GET", "POST", "OPTIONS"])
+# ✅ Allow both local dev and deployed frontend
+CORS(app, resources={r"/api/*": {"origins": ["http://localhost:3000", "https://sii-chatbot.vercel.app"]}})
 
-# Add CORS headers to all responses
-# @app.after_request
-# def after_request(response):
-#     response.headers.add('Access-Control-Allow-Origin', 'https://sii-chatbot.vercel.app')
-#     response.headers.add('Access-Control-Allow-Headers', 'Content-Type')
-#     response.headers.add('Access-Control-Allow-Methods', 'GET,POST,OPTIONS')
-#     return response
-
+# ✅ Optional: handle OPTIONS requests if needed
+@app.before_request
+def handle_options():
+    if request.method == 'OPTIONS':
+        return '', 200
 
 # Load data
 with open('src/data/data.json', 'r', encoding='utf-8') as file:
@@ -49,7 +40,7 @@ dimension = embeddings[0].shape[0]
 index = faiss.IndexFlatL2(dimension)
 index.add(np.array(embeddings))
 
-# Chat log
+# Chat log setup
 log_file = "chat_log.csv"
 if not os.path.isfile(log_file):
     with open(log_file, mode='w', newline='', encoding='utf-8') as file:
@@ -111,7 +102,7 @@ def user_feedback():
 
     return jsonify({'status': 'success', 'message': 'Feedback recorded'})
 
-@app.route('/api/chat', methods=['POST'])
+@app.route('/api/data', methods=['POST'])
 def chat():
     data = request.get_json()
     user_message = data.get('message')
