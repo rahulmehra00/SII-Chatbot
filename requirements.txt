@@ -7,3 +7,4 @@ python-dotenv
 fuzzywuzzy
 python-Levenshtein  # Optional but recommended for better performance with fuzzywuzzy
 numpy 
+gunicorn
