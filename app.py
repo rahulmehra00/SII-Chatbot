@@ -17,7 +17,7 @@ client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 app = Flask(__name__)
 
 # ✅ Allow both local dev and deployed frontend
-CORS(app, resources={r"/api/*": {"origins": ["http://localhost:3000", "https://sii-chatbot.vercel.app"]}})
+CORS(app, resources={r"/api/*": {"origins": ["https://siinew.businesstowork.com/", "https://sii-chatbot.vercel.app"]}})
 
 # ✅ Optional: handle OPTIONS requests if needed
 @app.before_request
