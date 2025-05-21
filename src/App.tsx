@@ -148,9 +148,9 @@ I'm here to help you with queries about the SII program, Courses, Visa Regulatio
 
     try {
       // LOCAL
-    //  const response = await fetch("http://127.0.0.1:5000/api/chat", {
+    const response = await fetch("http://127.0.0.1:5000/api/chat", {
 
-     const response = await fetch("https://demodata.businesstowork.com/data.json", {
+    // const response = await fetch("https://demodata.businesstowork.com/data.json", {
   method: "POST",
   headers: {
     "Content-Type": "application/json",
